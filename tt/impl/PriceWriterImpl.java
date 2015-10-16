@@ -80,4 +80,12 @@ public class PriceWriterImpl implements PriceWriter, Runnable {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see tt.PriceWriter#isRunning()
+	 */
+	@Override
+	public boolean isRunning() {
+		return !priceFeedSchedule.isCancelled();
+	}
+
 }
